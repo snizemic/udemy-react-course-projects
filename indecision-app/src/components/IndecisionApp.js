@@ -63,7 +63,7 @@ class IndecisionApp extends React.Component {
 
     handleClearSelectedOption = () => {
         this.setState(() => ({selectedOption: undefined}));
-    }
+    };
 
     render() {
 
