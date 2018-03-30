@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/playground/redux-101.js',
+    entry: ['babel-polyfill', './src/playground/promises.js'],
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -23,6 +23,7 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {
+        port: 3000,
         contentBase: path.join(__dirname, 'public'),
         historyApiFallback: true
     }
